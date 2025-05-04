@@ -26,4 +26,14 @@
     flex-direction: column;
     gap: 24px;
   }
+
+  &__bg {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      position: absolute;
+      z-index: -999;
+    }
+  }
 }

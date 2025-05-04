@@ -18,9 +18,6 @@
     margin-block: 120px;
 
     @include on-tablet {
-      background-image: url('../images/Shapes.png');
-      background-repeat: no-repeat;
-      background-position: center;
       margin-block: 180px;
     }
 

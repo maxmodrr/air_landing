@@ -1,0 +1,38 @@
+.link {
+  position: relative;
+  color: #fff;
+
+  @include letter-spacing-3;
+
+  &--burger-menu {
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &--logo {
+    @include hover(transform, scale(1.1));
+  }
+
+  &--text::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: $bg-button;
+    position: absolute;
+    border-radius: 2px;
+    bottom: -13px;
+    transform: scale(0);
+    transition: transform 0.3s;
+  }
+
+  &--text:hover::before {
+    transform: scale(1);
+  }
+
+  &__icon svg {
+    fill: white;
+
+    @include hover(fill, $bg-button);
+  }
+}
